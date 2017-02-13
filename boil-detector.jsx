@@ -94,6 +94,7 @@ class TemperatureInput extends React.Component {
             <input
               value={value}
               type="number"
+              step="0.1"
               placeholder={scale.symbol}
               onChange={this.handleChange}
               className="form-control" />
