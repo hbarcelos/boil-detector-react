@@ -83,10 +83,11 @@ class TemperatureInput extends React.Component {
 
   render() {
     const value = this.props.value;
+    const className = this.props.className;
     const scale = temperatureScales[this.props.scale];
 
     return (
-      <form className="col form">
+      <form className={className}>
         <fieldset>
           <legend>{scale.name}</legend>
           <div className="form-group">
@@ -130,11 +131,11 @@ class Calculator extends React.Component {
     const kelvin = tryConvert(value, unitConversion.from[scale].to.k);
 
     return (
-      <div className="container-fluid col-md-8 col-lg-6 col-xl-4">
+      <div className="container-fluid col-md-10 col-lg-8 col-xl-6">
         <div className="row">
-          <TemperatureInput scale="c" value={celsius} onChange={this.handleCelsiusChange} />
-          <TemperatureInput scale="f" value={farenheit} onChange={this.handleFahrenheitChange} />
-          <TemperatureInput scale="k" value={kelvin} onChange={this.handleKelvinChange} />
+          <TemperatureInput scale="c" className="col-sm-4" value={celsius} onChange={this.handleCelsiusChange} />
+          <TemperatureInput scale="f" className="col-sm-4" value={farenheit} onChange={this.handleFahrenheitChange} />
+          <TemperatureInput scale="k" className="col-sm-4" value={kelvin} onChange={this.handleKelvinChange} />
         </div>
         <BoilVeredict celsius={celsius} />
       </div>
