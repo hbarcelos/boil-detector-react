@@ -1,4 +1,4 @@
-#boil-detector-react
+# boil-detector-react
 
 Extended example from [React Docs](https://facebook.github.io/react/docs/lifting-state-up.html).
 
